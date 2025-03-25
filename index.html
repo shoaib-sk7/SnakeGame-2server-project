@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            background-color: black; 
+        }
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        canvas { 
+            background: black; 
+            display: block; 
+            border: 2px solid white;
+        }
+        #scoreboard {
+            width: 200px;
+            margin-left: 20px; 
+            color: white;
+            text-align: left; 
+        }
+        table {
+            width: 100%; 
+            border-collapse: collapse; 
+            color: white;
+        }
+        th, td {
+            border: 1px solid white;
+            padding: 8px; 
+            text-align: center;
+        }
+        th {
+            background-color: #f4b400; 
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h2 style="color: white;">Enter Username:</h2>
+            <input type="text" id="username" placeholder="Username">
+            <button onclick="startGame()">Start</button>
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+        </div>
+
+        <div id="scoreboard">
+            <h3>Leaderboard</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="scores"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
