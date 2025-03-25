@@ -1,0 +1,4 @@
+sudo apt update
+sudo apt install nginx
+after adding code >> sudo systemctl restart nginx
+permission >> sudo chmod 755 /var/www/html
