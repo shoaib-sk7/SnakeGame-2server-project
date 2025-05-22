@@ -1,9 +1,9 @@
 location /get_scores.php {
-        proxy_pass http://10.0.1.122/get_scores.php;
+        proxy_pass http://add-ip-or-dns/get_scores.php;
         proxy_set_header Host $host;
     }
 
     location /submit_score.php {
-        proxy_pass http://10.0.1.122/submit_score.php;
+        proxy_pass http://add-ip-or-dns/submit_score.php;
         proxy_set_header Host $host;
     }
